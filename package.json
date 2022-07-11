@@ -16,6 +16,7 @@
     "@hackclub/icons": "^0.0.9",
     "@hackclub/meta": "1.1.32",
     "@hackclub/theme": "^0.3.3",
+    "@harelpls/use-pusher": "^7.2.1",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^12.2.0",
     "@octokit/auth-app": "^3.6.1",
