@@ -156,9 +156,9 @@ const Page = () => (
               pb: 3
             }}
           >
-            Don’t run your coding&nbsp;club alone.
+            High-school hackers,
           </Text>
-          Make it a{' '}
+          welcome to{' '}
           <Text
             as="span"
             sx={{
@@ -185,8 +185,7 @@ const Page = () => (
             mb: [3, 4]
           }}
         >
-          Hack Club is a nonprofit network of high school coding&nbsp;clubs and
-          makers around the world. <strong>Applications are now open.</strong>
+          Hack Club is <b>a worldwide community of high school hackers</b>, online and in after-school clubs around the world.
         </Text>
         <Button
           as="a"
@@ -195,7 +194,7 @@ const Page = () => (
           target="_blank"
           rel="noopener"
         >
-          Apply now
+          Start a Club
         </Button>
         <NextLink href="/slack" passHref>
           <Button
@@ -243,7 +242,7 @@ const Page = () => (
     <Box as="section" sx={{ py: [4, 5], color: 'black' }}>
       <Container>
         <Text as="p" variant="eyebrow">
-          The rundown
+          Start a Hack Club
         </Text>
         <Heading as="h2" variant="title">
           Clubs discovering the{' '}
@@ -329,35 +328,83 @@ const Page = () => (
             </Text>
           </Grid>
         </Grid>
-        <Grid
-          columns={[null, '1fr 2fr']}
-          mt={[3, 5]}
-          sx={{ maxWidth: 'copyUltra', mx: 'auto' }}
-        >
-          <Heading as="h3" variant="headline" sx={{ fontSize: [4, 5], mb: 0 }}>
-            Go beyond club meetings.
-          </Heading>
-          <Text
-            as="p"
-            variant="lead"
-            sx={{ mt: 0, a: { variant: 'styles.a', color: 'blue' } }}
+      </Container>
+    </Box>
+    <Slack />
+    <Box as="section" sx={{ py: [4, 5], color: 'black' }}>
+      <Container>
+        <Text as="p" variant="eyebrow">
+          Attend or organize a hackathon
+        </Text>
+        <Heading as="h2" variant="title">
+          Hackathons are social coding marathons to build projects in a short amount of time and share them with the world.
+        </Heading>
+        <Text as="p" variant="lead" sx={{ maxWidth: 'copyPlus' }}>
+          Hack Clubs typically meet for 1.5 hours each week in high schools,
+          makerspaces, community centers, churches, and any other venue where
+          teenagers can gather. As a club leader, you get members (mostly
+          beginners) started on something to learn/create, then members work at
+          their own pace, building websites, apps, & games, and presenting them
+          at the end.
+        </Text>
+        <Grid columns={[null, null, 2, '3fr 2fr']} gap={[3, 4]} pt={[3, 3]}>
+          <Photo
+            src="https://dl.airtable.com/.attachmentThumbnails/904cf56ceac6b0921eceae02958dcd29/5851864a"
+            alt="Summer Creek Hack Club meeting, February 2020"
+            width={3000}
+            height={2550}
+            showAlt
+          />
+          <Grid
+            columns="auto 1fr"
+            sx={{
+              gridColumnGap: 3,
+              span: {
+                width: 36,
+                height: 36,
+                borderRadius: 24,
+                display: 'inline-block',
+                fontSize: 2,
+                lineHeight: '30px',
+                textAlign: 'center',
+                fontWeight: 'bold',
+                border: '3px solid currentColor'
+              },
+              p: { my: 0 },
+              strong: { display: 'block' }
+            }}
           >
-            Hack Clubs attend and run{' '}
-            <NextLink href="/hackathons" passHref><a>hackathons</a></NextLink> like{' '}
-            <a href="https://windyhacks.com">Windy&nbsp;City&nbsp;Hacks</a> &{' '}
-            <a href="https://www.sfchronicle.com/bayarea/article/Hack-the-Fog-makes-history-as-San-12729895.php">
-              Hack the Fog
-            </a>
-            , run summer programs like{' '}
-            <a href="https://web.archive.org/web/20200808171549/http://thecspn.com/?p=43434">
-              Hack Camp
-            </a>
-            , and compete in events like the{' '}
-            <a href="http://www.congressionalappchallenge.us">
-              Congressional App Challenge
-            </a>
-            . The&nbsp;hack’s the limit.
-          </Text>
+            <Text as="span" color="green">
+              1
+            </Text>
+            <Text as="p" variant="subtitle">
+              <strong>
+                A group of teens, many beginners, gather to start coding.
+              </strong>
+              The leader (that’s you!) presents for a few minutes, getting the
+              group started building something new.
+            </Text>
+            <Text as="span" color="cyan">
+              2
+            </Text>
+            <Text
+              as="p"
+              variant="subtitle"
+              sx={{ mt: 0, a: { variant: 'styles.a', color: 'blue' } }}
+            >
+              <strong>Everyone gets hacking, individually.</strong> Not hacking
+              bank accounts, being creative and{' '}
+              <Link href="/ship">making something awesome</Link>.
+            </Text>
+            <Text as="span" color="blue">
+              3
+            </Text>
+            <Text as="p" variant="subtitle">
+              <strong>To end, everyone demos their work.</strong>
+              As a leader, you’re cultivating a community of makers. Each member
+              showing off their work builds momentum & motivation.
+            </Text>
+          </Grid>
         </Grid>
       </Container>
     </Box>
@@ -408,7 +455,7 @@ const Page = () => (
         </NextLink>
       </Container>
     </Box>
-    <Box as="section" sx={{ py: [4, 5, 6], color: 'black' }}>
+    <Box as="section" sx={{ py: [4, 5, 6], color: 'black', display: 'none' }}>
       <Container
         sx={{
           maxWidth: [null, 'copyUltra'],
@@ -574,14 +621,14 @@ const Page = () => (
         />
       </Container>
     </Box>
-    <Slack />
+    
     <Box bg="snow" color="black" py={[5, 6]}>
       <Container sx={{ textAlign: ['left', 'center'] }}>
         <Text as="p" variant="eyebrow">
-          Next steps
+          Let's quickly review
         </Text>
         <Heading as="h2" variant="title">
-          Apply today to{' '}
+          Find your second-home in{' '}
           <Text
             as="span"
             sx={{
@@ -590,16 +637,13 @@ const Page = () => (
               ml: [-2, 0],
               whiteSpace: ['wrap', 'nowrap'],
               color: 'white',
-              bg: '#6f31b7'
+              bg: 'red'
             }}
           >
-            start your club
+            Hack Club
           </Text>
           .
         </Heading>
-        <Text as="p" variant="lead" mt={3} color="slate">
-          It’s all-online, free, & takes under an hour. We’ll help from there!
-        </Text>
         <Grid
           pt={[3, 4]}
           pb={[4, 5]}
@@ -622,7 +666,7 @@ const Page = () => (
         >
           <Card
             as="a"
-            href="https://apply.hackclub.com/"
+            href="https://ahackclub.com/slack"
             variant="interactive"
             sx={{
               background:
@@ -632,9 +676,9 @@ const Page = () => (
             }}
           >
             <Stage
-              icon="send"
+              icon="slack"
               color="white"
-              name="1. Application"
+              name="Join the Slack"
               desc="Start by telling us about your club & who’s leading it."
             />
           </Card>
@@ -647,9 +691,9 @@ const Page = () => (
             }}
           >
             <Stage
-              icon="emoji"
+              icon="clubs"
               color="white"
-              name="2. Onboarding call"
+              name="Start a Club"
               desc="Hop on a quick Zoom with someone from Hack Club HQ."
             />
           </Card>
@@ -661,22 +705,13 @@ const Page = () => (
             }}
           >
             <Stage
-              icon="event-check"
+              icon="event-code"
               color="white"
-              name="3. First meeting"
+              name="Attend a Hackathon"
               desc="Schedule your club’s first meeting & get going!"
             />
           </Card>
         </Grid>
-        <Button
-          as="a"
-          href="https://apply.hackclub.com"
-          target="_blank"
-          rel="noopener"
-          variant="ctaLg"
-        >
-          Apply to Hack Club
-        </Button>
       </Container>
     </Box>
     <Footer

@@ -40,11 +40,11 @@ const Content = () => (
       Coding is often seen as an isolating activity. Plenty of groups exist for
       kids who are interested in sports, theater, or chess, but the stereotype
       of a programmer is a person who sits alone in a dark room.{' '}
-      <strong>It doesn't have to be this way</strong>—in the Hack Club Slack
-      (Discord-style online groupchat), you'll find a group of {formatted}+{' '}
+      <strong>It doesn't have to be this way</strong>—in the Hack Club Slack, 
+      you'll find {formatted}+{' '}
       <Highlight>fabulous people</Highlight> to talk to, active at all hours.
-      For leaders, you'll be able to connect with other leaders and support one
-      another.
+      For leaders & hackathon organizers, you'll be able to connect with one another
+      and support each other.
     </Text>
     <Link href="/slack" passHref>
       <Button
