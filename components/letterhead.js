@@ -63,6 +63,7 @@ const Letterhead = ({
   title,
   desc,
   author = { name: null, avatar: null, url: null },
+  theme = 'light',
   date,
   img,
   path,
@@ -73,8 +74,11 @@ const Letterhead = ({
 }) => (
   <>
     <Meta as={Head} title={title} description={desc} image={img} />
-    <Nav color="text" />
-    <ForceTheme theme="light" />
+    <Nav
+      color={theme === 'light' ? 'text' : 'white'}
+      dark={theme === 'light' ? false : true}
+    />
+    <ForceTheme theme={theme} />
     <Box
       as="header"
       sx={{
@@ -110,7 +114,7 @@ const Letterhead = ({
     >
       {children}
     </Container>
-    <Footer />
+    <Footer dark={theme === 'light' ? false : true} />
   </>
 )
 
