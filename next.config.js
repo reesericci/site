@@ -73,6 +73,21 @@ const nextConfig = {
         destination: '/bank/first/',
         permanent: false
       },
+      {
+        source: '/fiscal-sponsorship/',
+        destination: '/bank/fiscal-sponsorship/',
+        permanent: false
+      },
+      {
+        source: '/fs/',
+        destination: '/bank/fiscal-sponsorship/',
+        permanent: false
+      },
+      {
+        source: '/bank/fs/',
+        destination: '/bank/fiscal-sponsorship/',
+        permanent: false
+      },
       { source: '/workshops/slack/', destination: '/slack/', permanent: true },
       { source: '/community/', destination: '/slack/', permanent: true },
       { source: '/hack_camp/', destination: '/camp/', permanent: true },
@@ -183,6 +198,10 @@ const nextConfig = {
       {
         source: '/sunsetting-som/',
         destination: '/content/sunsetting-som/'
+      },
+      {
+        source: '/bank/fiscal-sponsorship/',
+        destination: '/content/fiscal-sponsorship/'
       },
       {
         source: '/bank/apply/success',
