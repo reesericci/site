@@ -45,7 +45,7 @@ export function Winter() {
           as={Head}
           title="Winter Hardware Wonderland"
           description="Join the Hack Club community for a winter of hardware hacking, and get a $250 grant to build your project."
-          image={`/winter/og-image.png?${rsvpCount}`}
+          image={`https://hackclub.com/winter/og-image.png?${rsvpCount}`}
         />
         <Nav light />
         <Snowfall />
